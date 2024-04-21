@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+  <title>Calories Prediction</title>
+  <style>
+    /* Adjusting background image */
+    body {
+      background-image: url("https://cdn.pixabay.com/photo/2021/10/19/11/35/yoga-6723315_1280.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: scroll;
+      
+    }
+   
+  </style>
+</head>
+
+<body class="text-white">
+  <div class="h-screen flex justify-center items-center">
+    <div class="max-w-md w-full p-8 bg-black bg-opacity-50 rounded-lg shadow-lg">
+      <h2 class="mb-4 text-center text-4xl lg:text-6xl font-extrabold leading-none tracking-tight">Calorie Prediction</h2>
+      <form action="/predict_calories" method="post" id="fitnessForm" class="space-y-4">
+        <div>
+          <label for="gender" class="font-bold text-2xl">Gender:</label>
+          <input type="number" id="gender" name="gender" class="block w-full bg-gray-800 rounded-lg p-4 text-4xl" required />
+        </div>
+        <div>
+          <label for="age" class="font-bold text-2xl">Age:</label>
+          <input type="number" id="age" name="age" class="block w-full bg-gray-800 rounded-lg p-4 text-4xl" required />
+        </div>
+        <div>
+          <label for="height" class="font-bold text-2xl">Height:</label>
+          <input type="number" id="height" name="height" class="block w-full bg-gray-800 rounded-lg p-4 text-4xl" required />
+        </div>
+        <div>
+          <label for="weight" class="font-bold text-2xl">Weight:</label>
+          <input type="number" id="weight" name="weight" class="block w-full bg-gray-800 rounded-lg p-4 text-4xl" required />
+        </div>
+        <div>
+          <label for="duration" class="font-bold text-2xl">Duration:</label>
+          <input type="number" id="duration" name="duration" class="block w-full bg-gray-800 rounded-lg p-4 text-4xl" required />
+        </div>
+        <div>
+          <label for="heartRate" class="font-bold text-2xl">Heart Rate:</label>
+          <input type="number" id="heartRate" name="heartRate" class="block w-full bg-gray-800 rounded-lg p-4 text-4xl" required />
+        </div>
+        <div>
+          <label for="bodyTemp" class="font-bold text-2xl">Body Temperature:</label>
+          <input type="number" id="bodyTemp" name="bodyTemp" class="block w-full bg-gray-800 rounded-lg p-4 text-4xl" required />
+        </div>
+        <div class="text-center">
+          <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

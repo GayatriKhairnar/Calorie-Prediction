@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicted Calories</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Additional custom styles can be added here */
+    body {
+      background-image: url("https://cdn.pixabay.com/photo/2021/10/19/11/35/yoga-6723315_1280.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: scroll;
+      
+    }
+    </style>
+</head>
+
+<body class="bg-gray-100 h-screen flex justify-center items-center">
+    <div class="max-auto p-20 bg-white rounded-lg shadow-lg">
+        {% if error %}
+        <p class="text-red-500 font-bold">Error: {{ error }}</p>
+        {% else %}
+        <h3 class="text-5xl font-bold">Calories Burnt: {{ data }}</h3>
+        {% endif %}
+        <br>
+        <a href="{{url_for('index_page')}}" class="text-blue-500 hover:text-blue-700 text-3xl">Go to Homepage</a>
+    </div>
+</body>
+
+</html>
